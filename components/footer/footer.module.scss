@@ -1,0 +1,37 @@
+@use '../../styles/constants.scss';
+
+$footer-height: 50px;
+
+.footer-container {
+  height: $footer-height;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: constants.$secondary-color;
+}
+
+.footer__text {
+  font-size: 1rem;
+  color: constants.$text-color;
+}
+
+.footer__text__hinc {
+  font-size: 5px;
+}
+
+@media screen and (min-width: constants.$breakpoint-xs) {
+  .footer__text {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (min-width: constants.$breakpoint-sm) {
+  .footer__text {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: constants.$breakpoint-md) {
+  .footer__text {
+    font-size: 1.3rem;
+  }
+}

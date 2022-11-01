@@ -2,6 +2,7 @@ import '../styles/globals.scss';
 
 import { Alegreya, Poppins } from '@next/font/google';
 
+import Footer from '../components/footer/footer';
 import Header from '../components/header/header';
 
 // On exporte les polices utilisées par le site
@@ -19,6 +20,7 @@ export default function RootLayout({
       <body>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
