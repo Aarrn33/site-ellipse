@@ -1,7 +1,7 @@
 @use '../../styles/utils.module.scss';
 @use '../../styles/constants.scss';
 
-$links-count: 4;
+$links-count: 5;
 $navbar-height: 65px;
 $burger-side: 45px;
 $burger-bar-height: 2px;
@@ -15,7 +15,7 @@ $links-underline-height: 3px;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: constants.$secondary-color;
+  background-color: constants.$primary-color;
   height: $navbar-height;
   padding: 0rem 1rem;
 }
@@ -43,7 +43,7 @@ $links-underline-height: 3px;
   width: $burger-side;
   height: $burger-bar-height;
   border-radius: $burger-bar-height;
-  background-color: constants.$text-color;
+  background-color: constants.$secondary-color;
   transition: all $nav-menu-animation-duration ease-in-out;
 }
 
@@ -87,7 +87,7 @@ $links-underline-height: 3px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: constants.$secondary-color;
+  background-color: constants.$primary-color;
   transition: all $nav-menu-animation-duration ease-in-out;
 
   ul {
@@ -110,7 +110,7 @@ $links-underline-height: 3px;
       a {
         @extend .no-select;
 
-        color: constants.$text-color;
+        color: constants.$secondary-color;
         font-size: 3.5vh;
       }
     }
@@ -168,7 +168,7 @@ $links-underline-height: 3px;
             content: '';
             width: 0px;
             height: $links-underline-height;
-            background-color: constants.$primary-color;
+            background-color: constants.$secondary-color;
             transition: all 0.2s ease-in-out;
           }
 

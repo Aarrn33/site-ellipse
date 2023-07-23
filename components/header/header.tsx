@@ -10,6 +10,15 @@ import { useState } from 'react';
 import { alegreya } from '../../app/layout';
 import styles from './header.module.scss';
 
+// Énumération des titres des différentes pages
+export enum Pathnames {
+  Accueil = '/',
+  Ginette = '/ginette',
+  Ellipse = '/ellipse',
+  Mpsi = '/mpsi',
+  Contact = '/contact',
+}
+
 export default function Header() {
   const [showLinks, setShowLinks] = useState(false);
 
@@ -23,16 +32,19 @@ export default function Header() {
       >
         <ul className={alegreya.className}>
           <li>
-            <Link href='#'>Accueil</Link>
+            <Link href={Pathnames.Accueil}>Accueil</Link>
           </li>
           <li>
-            <Link href='#'>Ginette</Link>
+            <Link href={Pathnames.Ginette}>Ginette</Link>
           </li>
           <li>
-            <Link href='#'>La MPSI</Link>
+            <Link href={Pathnames.Ellipse}>L&apos;Ellipse</Link>
           </li>
           <li>
-            <Link href='#'>Contact</Link>
+            <Link href={Pathnames.Mpsi}>La MPSI</Link>
+          </li>
+          <li>
+            <Link href={Pathnames.Contact}>Contact</Link>
           </li>
         </ul>
       </nav>
