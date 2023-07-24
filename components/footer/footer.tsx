@@ -1,4 +1,9 @@
-import { alegreya } from '../../app/layout';
+/**
+ * Composant qui affiche le footer, c'est-à-dire
+ * le bas de page.
+ */
+
+import { alegreya } from '../../app/fonts';
 import styles from './footer.module.scss';
 
 export default function Footer() {

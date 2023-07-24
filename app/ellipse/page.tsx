@@ -1,3 +1,5 @@
+import PageTitle from '../../components/pageTitle/pageTitle';
+
 export default function Ellipse() {
-  return <h1>Page Ellipse</h1>;
+  return <PageTitle>L&apos;Ellipse</PageTitle>;
 }

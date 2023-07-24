@@ -1,3 +1,5 @@
+import PageTitle from '../../components/pageTitle/pageTitle';
+
 export default function Mpsi() {
-  return <h1>Page MPSI</h1>;
+  return <PageTitle>La MPSI</PageTitle>;
 }

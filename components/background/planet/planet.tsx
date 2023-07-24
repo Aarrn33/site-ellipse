@@ -11,10 +11,11 @@ import { usePathname } from 'next/navigation';
 import { useCallback, useEffect } from 'react';
 import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
+
 import { Pathnames } from '../../header/header';
 
 // Objet qui fait correspondre chaque nom de page à une orientation de la planète
-const ZRot = {
+const ZRot: { [path: string]: number } = {
   [Pathnames.Accueil]: (2 * Math.PI) / 5,
   [Pathnames.Ginette]: (4 * Math.PI) / 5,
   [Pathnames.Ellipse]: (6 * Math.PI) / 5,
@@ -67,8 +68,6 @@ export default function Planet() {
 
   // Effet de bord appelé lors d'un changement de page, pour animer le modèle
   useEffect(() => {
-    console.log(`Nouvelle page : ${pathname}`);
-
     // On change l'orientation du modèle selon l'axe Z (celui qui vient vers nous)
     api.start({ rotZ: ZRot[pathname] });
   }, [pathname, api]);
@@ -82,7 +81,7 @@ export default function Planet() {
           springs.rotY.to([0, 1], [-Math.PI / 2, Math.PI / 2]),
           springs.rotZ,
         ],
-        (rx, ry, rz) => [rx, ry, rz]
+        (x, y, z) => [x, y, z]
       )}
     >
       <primitive object={obj} />

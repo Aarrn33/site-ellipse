@@ -7,7 +7,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 
-import { alegreya } from '../../app/layout';
+import { alegreya } from '../../app/fonts';
 import styles from './header.module.scss';
 
 // Énumération des titres des différentes pages

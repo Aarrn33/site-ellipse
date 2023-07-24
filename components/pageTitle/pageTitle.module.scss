@@ -1,0 +1,33 @@
+@use '../../styles/constants.scss';
+
+@mixin white-center-margin {
+  text-align: center;
+  color: constants.$secondary-color;
+  margin-top: 75vh;
+}
+
+.page-title {
+  @include white-center-margin();
+  font-size: 2rem;
+}
+
+@media screen and (min-width: constants.$breakpoint-sm) {
+  .page-title {
+    @include white-center-margin();
+    font-size: 2.4rem;
+  }
+}
+
+@media screen and (min-width: constants.$breakpoint-md) {
+  .page-title {
+    @include white-center-margin();
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: constants.$breakpoint-lg) {
+  .page-title {
+    @include white-center-margin();
+    font-size: 4rem;
+  }
+}

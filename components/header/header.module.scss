@@ -11,6 +11,10 @@ $nav-links-animation-duration: 0.5s;
 $links-underline-height: 3px;
 
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -25,7 +29,7 @@ $links-underline-height: 3px;
 }
 
 .burger {
-  @extend .no-select;
+  @include utils.no-select();
 
   display: block;
   position: relative;
@@ -91,7 +95,7 @@ $links-underline-height: 3px;
   transition: all $nav-menu-animation-duration ease-in-out;
 
   ul {
-    @extend .list;
+    @include utils.reset-list();
 
     li {
       padding: 5vh;
@@ -108,7 +112,7 @@ $links-underline-height: 3px;
       }
 
       a {
-        @extend .no-select;
+        @include utils.no-select();
 
         color: constants.$secondary-color;
         font-size: 3.5vh;

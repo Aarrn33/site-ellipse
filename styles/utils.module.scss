@@ -1,36 +1,51 @@
-.heading2Xl {
-  font-size: 2.5rem;
-  line-height: 1.2;
+.heading4Xl {
+  font-size: 4rem;
+  line-height: 1;
   font-weight: 800;
   letter-spacing: -0.05rem;
   margin: 1rem 0;
+}
+
+.heading3Xl {
+  @extend .heading4Xl;
+
+  font-size: 3rem;
+}
+
+.heading2Xl {
+  @extend .heading3Xl;
+
+  font-size: 2.5rem;
+  line-height: 1.2;
 }
 
 .headingXl {
+  @extend .heading2Xl;
+
   font-size: 2rem;
   line-height: 1.3;
-  font-weight: 800;
-  letter-spacing: -0.05rem;
-  margin: 1rem 0;
 }
 
 .headingLg {
+  @extend .headingXl;
+
   font-size: 1.5rem;
   line-height: 1.4;
-  margin: 1rem 0;
 }
 
 .headingMd {
+  @extend .headingLg;
+
   font-size: 1.2rem;
   line-height: 1.5;
 }
 
-.list {
+@mixin reset-list {
   list-style: none;
 }
 
-// Permet de supprimer le surlignement bleu lors du click de certains éléments
-.no-select {
+// Permet de supprimer le surlignement bleu lors du clic de certains éléments
+@mixin no-select {
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
   -webkit-user-select: none;

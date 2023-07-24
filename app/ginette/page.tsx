@@ -1,3 +1,5 @@
+import PageTitle from '../../components/pageTitle/pageTitle';
+
 export default function Ginette() {
-  return <h1>Page Ginette</h1>;
+  return <PageTitle>Ginette</PageTitle>;
 }
