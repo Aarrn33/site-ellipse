@@ -1,0 +1,59 @@
+@use '../../styles/constants.scss';
+
+.text-card {
+  padding: 0.5rem;
+  margin: 1rem 0.5rem;
+  background-color: white;
+  border-radius: constants.$radius-s;
+  box-shadow: 3px 3px 17px 2px rgba(0, 0, 0, 0.5);
+}
+
+.card-title {
+  margin: 0.6rem 0;
+  text-decoration: underline;
+  text-decoration-color: constants.$primary-color;
+}
+
+.card-paragraph {
+  margin: 0.5rem 0;
+  text-align: justify;
+}
+
+@media screen and (min-width: constants.$breakpoint-sm) {
+  .text-card {
+    padding: 1rem;
+  }
+
+  .card-title {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (min-width: constants.$breakpoint-md) {
+  .text-card {
+    margin: 1.5rem 2rem;
+    padding: 1.5rem;
+  }
+
+  .card-title {
+    font-size: 2rem;
+  }
+
+  .card-paragraph {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: constants.$breakpoint-lg) {
+  .text-card {
+    margin: 2rem 5rem;
+  }
+
+  .card-title {
+    font-size: 2.3rem;
+  }
+
+  .card-paragraph {
+    font-size: 1.3rem;
+  }
+}
