@@ -6,5 +6,12 @@
 import styles from './card.module.scss';
 
 export default function TextCard({ children }: { children?: React.ReactNode }) {
-  return <div className={styles['text-card']}>{children}</div>;
+  return (
+    <div
+      className={`${styles.card} ${styles['text-container']}`}
+      style={{ backgroundColor: 'white' }}
+    >
+      {children}
+    </div>
+  );
 }

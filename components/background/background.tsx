@@ -19,7 +19,7 @@ export default function Background() {
       }}
     >
       <Planet />
-      <directionalLight position={[0, 2, 5]} intensity={0.4} />
+      <directionalLight position={[0, 2, 5]} intensity={1} />
     </Canvas>
   );
 }

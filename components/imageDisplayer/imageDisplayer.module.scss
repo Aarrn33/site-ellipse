@@ -1,0 +1,48 @@
+@use '../../styles/constants.scss';
+
+.image-displayer {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.image-displayer__image {
+  max-height: 85vh;
+  max-width: 90vw;
+  width: auto;
+  height: auto;
+  border-radius: constants.$radius-m;
+}
+
+.image-displayer__caption {
+  color: white;
+  margin-top: 0.3rem;
+  font-size: 0.7rem;
+}
+
+@media screen and (min-width: constants.$breakpoint-sm) {
+  .image-displayer__caption {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: constants.$breakpoint-md) {
+  .image-displayer__caption {
+    margin-top: 0.5rem;
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (min-width: constants.$breakpoint-lg) {
+  .image-displayer__caption {
+    font-size: 1.6rem;
+  }
+}

@@ -5,6 +5,8 @@ import { Metadata } from 'next';
 import Background from '../components/background/background';
 import Footer from '../components/footer/footer';
 import Header from '../components/header/header';
+import ImageDisplayer from '../components/imageDisplayer/imageDisplayer';
+import AppProvider from './appProvider';
 import { poppins } from './fonts';
 
 // Métadonnées du site (figureront finalement dans la balise <head>)
@@ -23,9 +25,12 @@ export default function RootLayout({
   return (
     <html lang='fr' className={poppins.className}>
       <body>
-        <Header />
-        <Background />
-        {children}
+        <AppProvider>
+          <Header />
+          <Background />
+          <ImageDisplayer />
+          {children}
+        </AppProvider>
         <Footer />
       </body>
     </html>
