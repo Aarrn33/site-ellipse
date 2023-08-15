@@ -22,7 +22,7 @@ const starsPositions = new Float32Array(STARS_COUNT * 3);
 
 for (let i = 0; i < STARS_COUNT; i++) {
   starsPositions[i * 3 + 0] = (Math.random() - 0.5) * 200;
-  starsPositions[i * 3 + 1] = (Math.random() - 0.5) * 100 - 25;
+  starsPositions[i * 3 + 1] = (Math.random() - 0.5) * 100 - 20;
   starsPositions[i * 3 + 2] = (Math.random() - 0.5) * 10 - 35;
 }
 

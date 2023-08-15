@@ -9,6 +9,8 @@ $burger-bar-margin: 12px;
 $nav-menu-animation-duration: 0.3s;
 $nav-links-animation-duration: 0.5s;
 $links-underline-height: 3px;
+$header-background-alpha: 0.3;
+$header-background-blur: 2px;
 
 .navbar {
   z-index: 5;
@@ -20,7 +22,12 @@ $links-underline-height: 3px;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: constants.$primary-color;
+  background-color: change-color(
+    $color: constants.$primary-color,
+    $alpha: $header-background-alpha
+  );
+  backdrop-filter: blur($header-background-blur);
+  -webkit-backdrop-filter: blur($header-background-blur);
   height: $navbar-height;
   padding: 0rem 1rem;
 }
@@ -92,7 +99,6 @@ $links-underline-height: 3px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: constants.$primary-color;
   transition: all $nav-menu-animation-duration ease-in-out;
 
   ul {
@@ -124,6 +130,12 @@ $links-underline-height: 3px;
 
 .navbar__links-shown {
   width: 100vw;
+  background-color: change-color(
+    $color: constants.$primary-color,
+    $alpha: $header-background-alpha
+  );
+  backdrop-filter: blur($header-background-blur);
+  -webkit-backdrop-filter: blur($header-background-blur);
 
   ul {
     li {
