@@ -7,6 +7,7 @@
 import { Canvas } from '@react-three/fiber';
 
 import Planet from './planet/planet';
+import Stars from './stars/stars';
 
 export default function Background() {
   return (
@@ -19,6 +20,7 @@ export default function Background() {
       }}
     >
       <Planet />
+      <Stars />
       <directionalLight position={[0, 2, 5]} intensity={1} />
     </Canvas>
   );

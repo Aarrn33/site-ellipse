@@ -33,6 +33,8 @@ export default function Planet() {
       rotX: 0,
       rotY: 0,
       rotZ: ZRot[Pathnames.Accueil],
+      posY: -5,
+      posZ: 1.5,
       config: config.molasses,
     }),
     []
@@ -47,7 +49,7 @@ export default function Planet() {
 
   // Callback appelé lors d'un mouvement de la souris
   const pointerMoveHandler = useCallback(
-    (event: MouseEvent) => {
+    (event: PointerEvent) => {
       // On actualise l'orientation du modèle (avec animation fluide)
       api.start({
         rotX: event.clientY / height,
@@ -57,14 +59,35 @@ export default function Planet() {
     [api, width, height]
   );
 
-  // Abonnement du callback à l'événement correspondant
+  // Callback appelé lors d'un scroll
+  const scrollHandler = useCallback(() => {
+    // On récupère ici la hauteur de la page
+    const height = Math.max(
+      document.body.getBoundingClientRect().height,
+      document.documentElement.getBoundingClientRect().height
+    );
+
+    // Pourcentage de la page scrollée
+    const scrollPercent = window.scrollY / (height - window.innerHeight);
+
+    // On actualise la position de la planète en lançant une animation adaptée
+    api.start({
+      posY: scrollPercent,
+      posZ: scrollPercent,
+    });
+  }, [api]);
+
+  // Effet de bord permettant d'abonner les callback aux événements correspondants
   useEffect(() => {
-    window.addEventListener('pointermove', pointerMoveHandler);
+    window.addEventListener('pointermove', pointerMoveHandler); // Mouvement de la souris
+    window.addEventListener('scroll', scrollHandler); // Scroll de la page
 
     return () => {
+      // On se désabonne des événements ici
       window.removeEventListener('pointermove', pointerMoveHandler);
+      window.removeEventListener('scroll', scrollHandler);
     };
-  }, [pointerMoveHandler]);
+  }, [pointerMoveHandler, scrollHandler]);
 
   // Effet de bord appelé lors d'un changement de page, pour animer le modèle
   useEffect(() => {
@@ -74,7 +97,13 @@ export default function Planet() {
 
   return (
     <animated.mesh
-      position={[0, -5, 1.5]}
+      position={to(
+        [
+          springs.posY.to([0, 1], [-5, 30]),
+          springs.posZ.to([0, 1], [1.5, -25]),
+        ],
+        (y, z) => [0, y, z]
+      )}
       rotation={to(
         [
           springs.rotX.to([0, 1], [-Math.PI / 24, Math.PI / 24]),
