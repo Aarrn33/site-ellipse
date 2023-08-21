@@ -12,7 +12,9 @@
 
 .clickable-image {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
+  max-height: 75vh;
+  object-fit: cover;
   cursor: pointer;
 }

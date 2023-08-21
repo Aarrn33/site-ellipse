@@ -4,10 +4,12 @@
 
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
 import { alegreya } from '../../app/fonts';
+import Logo from '../../public/images/misc/logo.png';
 import styles from './header.module.scss';
 
 // Énumération des titres des différentes pages
@@ -24,7 +26,13 @@ export default function Header() {
 
   return (
     <header className={styles.navbar}>
-      <div className={styles.navbar__logo}>logo</div>
+      <div className={styles['navbar__logo-container']}>
+        <Image
+          src={Logo}
+          alt='Le Petit Prince assis sur un croissant de Lune (logo du site)'
+          className={styles.navbar__logo}
+        />
+      </div>
       <nav
         className={`${styles.navbar__links} ${
           showLinks && styles['navbar__links-shown']

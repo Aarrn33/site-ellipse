@@ -7,14 +7,14 @@ import CardTitle from '../components/cards/cardTitle';
 import ImageCard from '../components/cards/imageCard';
 import TextCard from '../components/cards/textCard';
 import PageTitle from '../components/pageTitle/pageTitle';
-import PhotoClassPolos from '../public/images/misc/photo_classe_polos.jpg';
+import PhotoClassePolos from '../public/images/misc/photo_classe_polos.jpg';
 
 export default function Home() {
   return (
     <>
       <PageTitle>Bienvenue en Ellipse !</PageTitle>
       <ImageCard
-        src={PhotoClassPolos}
+        src={PhotoClassePolos}
         alt="Photo de toute l'Ellipse en polo de classe avec M. Rax"
         caption='Nous (les plus beaux)'
       >

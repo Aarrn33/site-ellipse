@@ -1,15 +1,16 @@
 @use '../../styles/utils.module.scss';
-@use '../../styles/constants.scss';
+@use '../../styles/constants.module.scss';
 
 $links-count: 5;
 $navbar-height: 65px;
+$logo-height-percent: 0.9;
 $burger-side: 45px;
 $burger-bar-height: 2px;
 $burger-bar-margin: 12px;
 $nav-menu-animation-duration: 0.3s;
 $nav-links-animation-duration: 0.5s;
 $links-underline-height: 3px;
-$header-background-alpha: 0.3;
+$header-background-alpha: 0.7;
 $header-background-blur: 2px;
 
 .navbar {
@@ -32,8 +33,17 @@ $header-background-blur: 2px;
   padding: 0rem 1rem;
 }
 
-.navbar__logo {
+.navbar__logo-container {
   flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.navbar__logo {
+  height: calc($logo-height-percent * $navbar-height);
+  width: auto;
+  cursor: pointer;
 }
 
 .burger {

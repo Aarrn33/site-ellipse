@@ -4,6 +4,10 @@
 
 import styles from './card.module.scss';
 
-export default function CardParagraph({ children }: { children: string }) {
+export default function CardParagraph({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return <p className={styles['card-paragraph']}>{children}</p>;
 }

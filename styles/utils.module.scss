@@ -1,3 +1,6 @@
+@use './constants.module.scss';
+
+// Formatage des différents niveaux de titre
 .heading4Xl {
   font-size: 4rem;
   line-height: 1;
@@ -38,6 +41,82 @@
 
   font-size: 1.2rem;
   line-height: 1.5;
+}
+
+// Affichage de contenu sur plusieurs colonnes et conteneur avec marges standards
+.with-margin {
+  margin: 0.5rem 1rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.column-2,
+.column-3,
+.column-4 {
+  flex: 100%;
+  max-width: 100%;
+}
+
+.column-2 > *,
+.column-3 > *,
+.column-4 > * {
+  margin-bottom: 0.5rem;
+}
+
+@media screen and (min-width: constants.$breakpoint-sm) {
+  .column-4 {
+    flex: 49%;
+    max-width: 49%;
+  }
+}
+
+@media screen and (min-width: constants.$breakpoint-md) {
+  .with-margin {
+    margin: 1.5rem 2rem;
+  }
+
+  .column-2 > *,
+  .column-3 > *,
+  .column-4 > * {
+    margin-bottom: 1.5rem;
+  }
+
+  .column-2,
+  .column-3 {
+    flex: 49%;
+    max-width: 49%;
+  }
+
+  .column-4 {
+    flex: 32%;
+    max-width: 32%;
+  }
+}
+
+@media screen and (min-width: constants.$breakpoint-lg) {
+  .with-margin {
+    margin: 2rem 5rem;
+  }
+
+  .column-2 > *,
+  .column-3 > *,
+  .column-4 > * {
+    margin-bottom: 2rem;
+  }
+
+  .column-3 {
+    flex: 32%;
+    max-width: 32%;
+  }
+
+  .column-4 {
+    flex: 24%;
+    max-width: 24%;
+  }
 }
 
 @mixin reset-list {
