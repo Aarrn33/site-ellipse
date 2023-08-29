@@ -28,7 +28,7 @@ export default function ImageCard({
         src={props.src}
         alt={props.alt}
         caption={props.caption}
-        className={styles['upper-part']}
+        containerClassName={styles['upper-part']}
       />
       <div className={`${styles['text-container']} ${styles['lower-part']}`}>
         {props.children}

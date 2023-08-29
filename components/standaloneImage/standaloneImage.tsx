@@ -17,7 +17,7 @@ export default function StandaloneImage(
       src={props.src}
       alt={props.alt}
       caption={props.caption}
-      className={`${styles['standalone-image']} ${utils['with-margin']}`}
+      containerClassName={`${styles['standalone-image']} ${utils['with-margin']}`}
     />
   );
 }

@@ -1,0 +1,16 @@
+.photo-selector__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  * {
+    display: inline-block;
+  }
+}
+
+.photo-selector__selector {
+}
+
+.photo-selector__image {
+  max-height: 95vh !important;
+}

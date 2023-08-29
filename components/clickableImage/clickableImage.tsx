@@ -14,7 +14,8 @@ export interface ClickableImageProps {
   src: StaticImageData;
   alt: string;
   caption?: string;
-  className?: string;
+  containerClassName?: string;
+  imageClassName?: string;
   style?: CSSProperties;
 }
 
@@ -27,14 +28,14 @@ export default function ClickableImage(props: ClickableImageProps) {
       onClick={() =>
         dispatch(displayImage(props.src, props.alt, props.caption))
       }
-      className={`${styles['clickable-image-container']} ${props.className}`}
+      className={`${styles['clickable-image-container']} ${props.containerClassName}`}
     >
       <Image
         src={props.src}
         alt={props.alt}
         title={props.caption}
         placeholder='blur'
-        className={`${styles['clickable-image']}`}
+        className={`${styles['clickable-image']} ${props.imageClassName}`}
         style={props.style}
       />
     </div>
