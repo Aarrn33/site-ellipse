@@ -18,7 +18,6 @@ export enum Pathnames {
   Ginette = '/ginette',
   Ellipse = '/ellipse',
   Mpsi = '/mpsi',
-  Contact = '/contact',
 }
 
 export default function Header() {
@@ -40,19 +39,24 @@ export default function Header() {
       >
         <ul className={alegreya.className}>
           <li>
-            <Link href={Pathnames.Accueil}>Accueil</Link>
+            <Link href={Pathnames.Accueil} onClick={() => setShowLinks(false)}>
+              Accueil
+            </Link>
           </li>
           <li>
-            <Link href={Pathnames.Ginette}>Ginette</Link>
+            <Link href={Pathnames.Ginette} onClick={() => setShowLinks(false)}>
+              Ginette
+            </Link>
           </li>
           <li>
-            <Link href={Pathnames.Ellipse}>L&apos;Ellipse</Link>
+            <Link href={Pathnames.Ellipse} onClick={() => setShowLinks(false)}>
+              L&apos;Ellipse
+            </Link>
           </li>
           <li>
-            <Link href={Pathnames.Mpsi}>La MPSI</Link>
-          </li>
-          <li>
-            <Link href={Pathnames.Contact}>Contact</Link>
+            <Link href={Pathnames.Mpsi} onClick={() => setShowLinks(false)}>
+              La MPSI
+            </Link>
           </li>
         </ul>
       </nav>

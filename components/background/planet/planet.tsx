@@ -20,7 +20,6 @@ const ZRot: { [path: string]: number } = {
   [Pathnames.Ginette]: (4 * Math.PI) / 5,
   [Pathnames.Ellipse]: (6 * Math.PI) / 5,
   [Pathnames.Mpsi]: (8 * Math.PI) / 5,
-  [Pathnames.Contact]: 0,
 };
 
 export default function Planet() {
