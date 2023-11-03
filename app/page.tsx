@@ -39,7 +39,8 @@ export default function Home() {
           en Ellipse ?
         </CardParagraph>
         <CardParagraph>
-          Des questions ? Admis en MPSI à Ginette ? Contacte nous !
+          Des questions ? Admis en MPSI à Ginette ? Contacte-nous ! (voir juste
+          en dessous)
         </CardParagraph>
       </TextCard>
     </>

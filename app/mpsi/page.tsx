@@ -4,18 +4,24 @@ import CardTitle from '../../components/cards/cardTitle';
 import ImageCard from '../../components/cards/imageCard';
 import TextCard from '../../components/cards/textCard';
 import PageTitle from '../../components/pageTitle/pageTitle';
-import PhotoBadminton from '../../public/images/misc/badminton.jpg';
-import PhotoAnglais from '../../public/images/misc/elizabeth.jpg';
-import PhotoMemeMaths from '../../public/images/misc/proofs.png';
-import PhotoSchemaBloc from '../../public/images/misc/si.jpg';
 import timeTableStyles from '../../styles/timetable.module.scss';
 import utils from '../../styles/utils.module.scss';
+
+import PhotoBadminton from '../../public/images/misc/badminton.jpg';
+import PhotoAnglais from '../../public/images/misc/elizabeth.jpg';
+import PhotoMemeMaths from '../../public/images/misc/purity.png';
+import PhotoSalleZ from '../../public/images/misc/salle_pale.jpg';
+import PhotoSchemaBloc from '../../public/images/misc/si.jpg';
 
 export default function Mpsi() {
   return (
     <>
       <PageTitle>La MPSI</PageTitle>
-      <TextCard>
+      <ImageCard
+        src={PhotoSalleZ}
+        alt='Photo de la salle dans laquelle tous les MPSI composent pour les devoirs surveillés'
+        caption='La salle où se tiennent les devoirs surveillés.. ça me donne froid dans le dos !'
+      >
         <CardTitle>Un petit topo sur la filière</CardTitle>
         <CardParagraph>
           Matrices, polynômes, suites et intégrales ? MPSI, c&apos;est tout
@@ -27,7 +33,7 @@ export default function Mpsi() {
           plus, rejoignez nous en MPSI ! Dans toutes les matières, même non
           scientifiques, on aborde un programme soutenu mais passionnant.
         </CardParagraph>
-      </TextCard>
+      </ImageCard>
       <TextCard>
         <CardTitle>Travailler en prépa</CardTitle>
         <CardParagraph>
@@ -254,8 +260,8 @@ export default function Mpsi() {
       {/* Présentation des différentes matières */}
       <ImageCard
         src={PhotoMemeMaths}
-        alt='Petite bande dessinée mettant en scène un personnage faisant une démonstration fumeuse'
-        caption='Un aperçu de ce à quoi ressemblent les démonstrations en arithmétique'
+        alt='Petite bande dessinée montrant une échelle de la pureté des disciplines scientifiques'
+        caption='Rien que la pure vérité..'
       >
         <CardTitle>Les Mathématiques</CardTitle>
         <CardParagraph>

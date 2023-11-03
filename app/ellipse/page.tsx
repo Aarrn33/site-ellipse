@@ -4,6 +4,7 @@ import ImageCard from '../../components/cards/imageCard';
 import TextCard from '../../components/cards/textCard';
 import PageTitle from '../../components/pageTitle/pageTitle';
 import PhotoSelector from '../../components/photoSelector/photoSelector';
+import StandaloneImage from '../../components/standaloneImage/standaloneImage';
 
 import Classe2015 from '../../public/images/class_photos/2014-2015.jpg';
 import Classe2016 from '../../public/images/class_photos/2015-2016.jpg';
@@ -14,8 +15,10 @@ import Classe2020 from '../../public/images/class_photos/2019-2020.jpg';
 import Classe2021 from '../../public/images/class_photos/2020-2021.jpg';
 import Classe2022 from '../../public/images/class_photos/2021-2022.jpg';
 import Classe2023 from '../../public/images/class_photos/2022-2023.jpg';
-import PhotoTableau from '../../public/images/misc/instruments.jpg';
-import PhotoExplication from '../../public/images/misc/salle.jpg';
+
+import PhotoEllipseGala from '../../public/images/misc/ellipse_gala.jpg';
+import PhotoMenaceTaupe from '../../public/images/misc/menace_de_mort_taupe.jpg';
+import PhotoRenardsOrigami from '../../public/images/misc/renards_origami.jpg';
 
 // Ensemble des photos de classe depuis 2014 !
 const classPhotos = {
@@ -35,9 +38,9 @@ export default function Ellipse() {
     <>
       <PageTitle>L&apos;Ellipse</PageTitle>
       <ImageCard
-        src={PhotoTableau}
-        alt="Une photo d'un tableau de la classe, où sont marqués les noms des élèves avec instruments associés pour le concert des élèves."
-        caption="Une description détaillée de l'orchestre de l'Ellipse à l'occasion du concert des élèves"
+        src={PhotoRenardsOrigami}
+        alt='Une foule de renards en origami disposés sur le bureau du professeur'
+        caption='On aime pas mal les renards en Ellipse..'
       >
         <CardTitle>Qui sommes-nous ?</CardTitle>
         <CardParagraph>
@@ -55,6 +58,11 @@ export default function Ellipse() {
           magiciens, joueurs d&apos;échecs, poètes et artistes…
         </CardParagraph>
       </ImageCard>
+      <StandaloneImage
+        src={PhotoEllipseGala}
+        alt='Photo de certains Ellipses au gala annuel de Ginette'
+        caption='Photo des Ellipses au gala annuel de Ginette'
+      />
       <TextCard>
         <CardTitle>Les Ellipsettes</CardTitle>
         <CardParagraph>
@@ -68,9 +76,9 @@ export default function Ellipse() {
         </CardParagraph>
       </TextCard>
       <ImageCard
-        src={PhotoExplication}
-        alt='Photo de la salle de classe ; M. Nougayrede explique quelque chose à cinq élèves qui écoutent religieusement.'
-        caption='Monsieur Nougayrede expliquant un DM compliqué à des élèves qui font semblant de le comprendre dans notre magnifique salle de classe.'
+        src={PhotoMenaceTaupe}
+        alt="Une photo d'Ellipse posant fièrement à côté de la mascotte des taupins (une petite taupe en peluche)"
+        caption='La taupe Alix a eu chaud ce jour-là...'
       >
         <CardTitle>Les autres classes de la BJ</CardTitle>
         <CardParagraph>

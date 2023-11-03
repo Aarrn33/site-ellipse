@@ -8,9 +8,10 @@ import StandaloneImage from '../../components/standaloneImage/standaloneImage';
 import utils from '../../styles/utils.module.scss';
 
 import Link from 'next/link';
+import PhotoCraies from '../../public/images/misc/cd_craies.jpg';
+import PhotoPelerinage from '../../public/images/misc/chartres.jpg';
 import PhotoGinetteHoche from '../../public/images/misc/ginette_hoche.jpg';
-import PhotoPelerinage from '../../public/images/misc/pelerinage.jpg';
-import PhotoCraies from '../../public/images/misc/pentacle.jpg';
+import PhotoPetitPrincePostit from '../../public/images/misc/petit_prince_postit.jpg';
 import PhotoPiaule from '../../public/images/misc/piaule.jpg';
 import PhotoPotager from '../../public/images/misc/potager.jpg';
 import PhotoRabinage from '../../public/images/misc/rabinage.jpg';
@@ -141,7 +142,11 @@ export default function Ginette() {
           chocolat quand le moral n&apos;est pas au top.
         </CardParagraph>
       </ImageCard>
-      <TextCard>
+      <ImageCard
+        src={PhotoPetitPrincePostit}
+        alt='Petit Prince immense reconstitué en post-its sur la façade du bâtiment Saint-Joseph'
+        caption='Voilà un aperçu du fruit de la collaboration des Ellipses (ça va.. la tête est pas si terrible !)'
+      >
         <CardTitle>L&apos;esprit co</CardTitle>
         <CardParagraph>
           Ginette, c&apos;est plus qu&apos;une prépa. C&apos;est
@@ -154,7 +159,7 @@ export default function Ginette() {
           classe, qui fait toute la particularité du cadre de vie à la BJ. Voici
           une présentation (loin d&apos;être exhaustive) de ces CD.
         </CardParagraph>
-      </TextCard>
+      </ImageCard>
       {/* Affichage des cartes de présentation des CD */}
       <div className={`${utils.row} ${utils['with-margin']}`}>
         <div className={utils['column-2']}>
@@ -260,8 +265,8 @@ export default function Ginette() {
           </TextCard>
           <ImageCard
             src={PhotoCraies}
-            alt='Craies formant un pentacle satanique sur le bureau du professeur'
-            caption='Le CD Craies était mal réveillé ce jour-là...'
+            alt="Craies formant un personnage qui fait de l'escrime"
+            caption='Représentation fidèle de M. Rax faisant cours'
             noMargin
           >
             <CardSubTitle>Le CD Craies</CardSubTitle>

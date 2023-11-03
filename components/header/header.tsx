@@ -25,13 +25,17 @@ export default function Header() {
 
   return (
     <header className={styles.navbar}>
-      <div className={styles['navbar__logo-container']}>
+      <div></div>
+      <Link
+        className={styles['navbar__logo-container']}
+        href={Pathnames.Accueil}
+      >
         <Image
           src={Logo}
           alt='Le Petit Prince assis sur un croissant de Lune (logo du site)'
           className={styles.navbar__logo}
         />
-      </div>
+      </Link>
       <nav
         className={`${styles.navbar__links} ${
           showLinks && styles['navbar__links-shown']
