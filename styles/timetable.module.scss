@@ -1,0 +1,125 @@
+@use './constants.module.scss';
+
+$math-color: #114854;
+$physics-color: #e13e39;
+$french-color: #134397;
+$pe-color: #488e2e;
+$first-langage-color: #516fa3;
+$computer-science-color: #a3710d;
+$engineering-color: #0c8346;
+$rabinage-color: #3c2d6a;
+$test-color: #5f634f;
+
+.timetable-wrapper {
+  position: relative;
+  overflow: auto;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.timetable {
+  table-layout: fixed;
+  border-collapse: collapse;
+  padding: 5px;
+  border: 1px solid grey;
+  min-width: 100%;
+}
+
+.timetable tr {
+  height: 1px;
+  border: 1px solid #e8ebed;
+}
+
+.timetable th {
+  padding: 1rem;
+  border: 1px solid #e8ebed;
+}
+
+.timetable td > div {
+  height: 100%;
+}
+
+.timetable thead {
+  font-size: 12px;
+  text-align: center;
+}
+
+.timetable td {
+  text-align: center;
+  height: inherit;
+  padding: 4px;
+  border: 1px solid #e8ebed;
+  min-width: 120px;
+}
+
+.timetable th:nth-child(1) {
+  z-index: 5;
+  text-align: left;
+  width: 130px;
+  min-width: 130px;
+  font-size: 14px;
+  position: sticky;
+  position: -webkit-sticky;
+  left: 0px;
+  background-color: whitesmoke;
+  text-align: center;
+}
+
+.timetable td:nth-child(1) {
+  text-align: left;
+  width: 130px;
+  min-width: 130px;
+  font-size: 14px;
+  height: 50px;
+  position: sticky;
+  position: -webkit-sticky;
+  left: 0px;
+  background-color: whitesmoke;
+  text-align: center;
+  z-index: 5;
+}
+
+.timetable td .subject {
+  border-radius: constants.$radius-s;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-weight: 500;
+  color: white;
+}
+
+.timetable td .subject.math {
+  background-color: $math-color;
+}
+
+.timetable td .subject.physique {
+  background-color: $physics-color;
+}
+
+.timetable td .subject.francais {
+  background-color: $french-color;
+}
+
+.timetable td .subject.eps {
+  background-color: $pe-color;
+}
+
+.timetable td .subject.lv1 {
+  background-color: $first-langage-color;
+}
+
+.timetable td .subject.info {
+  background-color: $computer-science-color;
+}
+
+.timetable td .subject.si {
+  background-color: $engineering-color;
+}
+
+.timetable td .subject.rabinage {
+  background-color: $rabinage-color;
+}
+
+.timetable td .subject.composition {
+  background-color: $test-color;
+}
