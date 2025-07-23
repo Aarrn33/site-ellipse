@@ -15,6 +15,8 @@ import Classe2020 from '../../public/images/class_photos/2019-2020.jpg';
 import Classe2021 from '../../public/images/class_photos/2020-2021.jpg';
 import Classe2022 from '../../public/images/class_photos/2021-2022.jpg';
 import Classe2023 from '../../public/images/class_photos/2022-2023.jpg';
+import Classe2024 from '../../public/images/class_photos/2023-2024.jpg';
+import Classe2025 from '../../public/images/class_photos/2024-2025.jpg';
 
 import PhotoEllipseGala from '../../public/images/misc/ellipse_gala.jpg';
 import PhotoMenaceTaupe from '../../public/images/misc/menace_de_mort_taupe.jpg';
@@ -22,6 +24,8 @@ import PhotoRenardsOrigami from '../../public/images/misc/renards_origami.jpg';
 
 // Ensemble des photos de classe depuis 2014 !
 const classPhotos = {
+  ['2024-2025']: Classe2025,
+  ['2023-2024']: Classe2024,
   ['2022-2023']: Classe2023,
   ['2021-2022']: Classe2022,
   ['2020-2021']: Classe2021,

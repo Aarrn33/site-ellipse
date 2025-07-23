@@ -94,23 +94,23 @@ export default function Mpsi() {
                 </td>
                 <td rowSpan={2}>
                   <div
-                    className={`${timeTableStyles.subject} ${timeTableStyles.math}`}
-                  >
-                    Maths
-                  </div>
-                </td>
-                <td rowSpan={2}>
-                  <div
-                    className={`${timeTableStyles.subject} ${timeTableStyles.math}`}
-                  >
-                    Maths
-                  </div>
-                </td>
-                <td rowSpan={2}>
-                  <div
                     className={`${timeTableStyles.subject} ${timeTableStyles.physique}`}
                   >
                     Physique
+                  </div>
+                </td>
+                <td rowSpan={2}>
+                  <div
+                    className={`${timeTableStyles.subject} ${timeTableStyles.math}`}
+                  >
+                    Maths
+                  </div>
+                </td>
+                <td rowSpan={2}>
+                  <div
+                    className={`${timeTableStyles.subject} ${timeTableStyles.si}`}
+                  >
+                    TP SI (Groupe 2)
                   </div>
                 </td>
               </tr>
@@ -119,19 +119,21 @@ export default function Mpsi() {
               </tr>
               <tr>
                 <td>10h30 - 11h30</td>
-                <td></td>
+                <td rowSpan={1}>
+                  <div className={`${timeTableStyles.subject} ${timeTableStyles.physique}`}>
+                    TD Physique / SI
+                  </div>
+                </td>
                 <td rowSpan={2}>
-                  <div
-                    className={`${timeTableStyles.subject} ${timeTableStyles.physique}`}
-                  >
+                  <div className={`${timeTableStyles.subject} ${timeTableStyles.physique}`}>
                     Physique
                   </div>
                 </td>
                 <td rowSpan={2}>
                   <div
-                    className={`${timeTableStyles.subject} ${timeTableStyles.eps}`}
+                    className={`${timeTableStyles.subject} ${timeTableStyles.francais}`}
                   >
-                    EPS
+                    Français
                   </div>
                 </td>
                 <td rowSpan={1}>
@@ -148,29 +150,24 @@ export default function Mpsi() {
                     LV1
                   </div>
                 </td>
-                <td rowSpan={1}>
+                <td rowSpan={2}>
                   <div
-                    className={`${timeTableStyles.subject} ${timeTableStyles.physique}`}
+                    className={`${timeTableStyles.subject} ${timeTableStyles.math}`}
                   >
-                    Physique
+                    Maths
                   </div>
                 </td>
               </tr>
               <tr>
                 <td>11h30 - 12h30</td>
                 <td rowSpan={1}>
-                  <div
-                    className={`${timeTableStyles.subject} ${timeTableStyles.si}`}
-                  >
-                    SI
+                  <div className={`${timeTableStyles.subject} ${timeTableStyles.physique}`}>
+                    TD Physique / SI
                   </div>
                 </td>
-                <td></td>
                 <td rowSpan={1}>
-                  <div
-                    className={`${timeTableStyles.subject} ${timeTableStyles.si}`}
-                  >
-                    TD SI
+                  <div className={`${timeTableStyles.subject} ${timeTableStyles.physique}`}>
+                    Chimie
                   </div>
                 </td>
               </tr>
@@ -189,21 +186,21 @@ export default function Mpsi() {
                   <div
                     className={`${timeTableStyles.subject} ${timeTableStyles.info}`}
                   >
-                    Info
-                  </div>
-                </td>
-                <td rowSpan={1}>
-                  <div
-                    className={`${timeTableStyles.subject} ${timeTableStyles.physique}`}
-                  >
-                    Chimie
+                    TP Info
                   </div>
                 </td>
                 <td rowSpan={2}>
                   <div
-                    className={`${timeTableStyles.subject} ${timeTableStyles.francais}`}
+                    className={`${timeTableStyles.subject} ${timeTableStyles.si}`}
                   >
-                    Français
+                    TP SI (Groupe 1)
+                  </div>
+                </td>
+                <td rowSpan={2}>
+                  <div
+                    className={`${timeTableStyles.subject} ${timeTableStyles.eps}`}
+                  >
+                    Sport
                   </div>
                 </td>
                 <td></td>
@@ -234,8 +231,20 @@ export default function Mpsi() {
               </tr>
               <tr>
                 <td>16h00 - 17h00</td>
-                <td></td>
-                <td></td>
+                <td rowSpan={1}>
+                  <div
+                    className={`${timeTableStyles.subject} ${timeTableStyles.info}`}
+                  >
+                    Info
+                  </div>
+                </td>
+                <td rowSpan={2}>
+                  <div
+                    className={`${timeTableStyles.subject} ${timeTableStyles.info}`}
+                  >
+                    Option Info
+                  </div>
+                </td>
                 <td></td>
                 <td></td>
                 <td rowSpan={2}>
@@ -248,7 +257,6 @@ export default function Mpsi() {
               </tr>
               <tr>
                 <td>17h00 - 18h00</td>
-                <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
