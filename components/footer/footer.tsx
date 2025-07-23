@@ -12,7 +12,7 @@ export default function Footer() {
   return (
     <footer className={styles['footer-container']}>
       <p className={`${alegreya.className} ${styles.footer__text}`}>
-        Contact : arnaudlmdc@gmail.com
+        Contact : arnaudlmdc [at] gmail.com
       </p>
       <p className={`${alegreya.className} ${styles.footer__text}`}>
         © 1854 - {year} Les CD web Ellipse{' '}
